@@ -1,0 +1,29 @@
+---
+- name: Pull Docker Image From DockerHub
+  hosts: localhost
+  remote_user: hemant
+  become: false
+  tasks:
+    - name: Pull Docker Image
+      docker_image: 
+        name: "hemantkumarcpersonal/calculator"
+        source: pull
+      register: docker_pull_result
+
+    - name: Display Docker Pull Request
+      debug:
+        var: docker_pull_result
+
+    - name: Start Docker Service
+      service:
+        name: docker
+        state: started
+
+    - name: Running Container
+      docker_container:
+        name: calculator
+        image: hemantkumarcpersonal/calculator
+        tty: yes
+        interactive: yes
+        command: /bin/bash
+
