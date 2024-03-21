@@ -25,5 +25,4 @@
         image: hemantkumarcpersonal/calculator
         tty: yes
         interactive: yes
-        command: /bin/bash
 
