@@ -25,5 +25,5 @@
         image: hemantkumarcpersonal/calculator
         tty: yes
         interactive: yes
-        command: java -jar SPE-MiniProject-1.0-SNAPSHOT.jar
+        command: /bin/bash
 
