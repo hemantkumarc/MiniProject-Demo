@@ -24,5 +24,4 @@
         name: calculator
         image: hemantkumarcpersonal/calculator
         tty: yes
-        interactive: yes
 
